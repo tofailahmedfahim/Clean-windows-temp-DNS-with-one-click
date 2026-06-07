@@ -1,0 +1,15 @@
+just use this code , make a text file and save it as you want to name it , dont for get to save it as All file then put .bat / otherwise it wont run , thank for using , speard the good knowledge when you can .
+
+@echo off
+title Windows Cleanup Tool
+color 0A
+
+echo Cleaning Temp Files...
+del /s /f /q %temp%\*.* >nul 2>&1
+del /s /f /q C:\Windows\Temp\*.* >nul 2>&1
+
+echo Flushing DNS Cache...
+ipconfig /flushdns >nul
+
+echo Cleanup Completed Successfully!
+pause
